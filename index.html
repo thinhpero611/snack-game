@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	body {
+		z-index: 1;
+		background:
+	linear-gradient(to right, #336699 0%, #669999 100%);
+
+	}
+	.container {
+		display: flex;
+		justify-content: space-around;
+	}
+	.canvas {
+		border-radius: 4px;
+		box-shadow: 6px 6px 5px #333333;
+		background-color: #009999;
+		z-index: 2;
+	}
+	.hover {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: black;
+		opacity: 0.6;
+		z-index: 50;
+	}
+	.close {
+		background-color: #fff;
+		position: relative;
+		top: 30%;
+		left: 40%;
+		width: 150px;
+		height: 80px;
+		border-radius: 8px;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		font-weight: 500;
+		opacity: 0.8;
+	}
+	.exist {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 50px;
+		font-size: 50px;
+		color: #f2f2f2;
+		text-align: center;
+		cursor: pointer;
+	}
+	.exist:hover {
+		color: darkred;
+	}
+</style>
+</head>
+<body>
+	<div class='hover'>
+		<div class="exist">x</div>
+		<div class="close">You lose</div>
+	</div>
+	<div class="container">
+		<canvas class="canvas" height="300" width="300"></canvas>
+		<div style="flex-basis: 300px">
+			<h3 width="200" height="auto">Your Score: <span class="score">0</span></h3>
+			<button class="stop">Pause Game</button>
+			<button onclick="window.location.reload()">Restart</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="snack.js"></script>
+	<script type="text/javascript" src="fruit.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="draw.js"></script>
+	</body>
+</html>
